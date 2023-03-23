@@ -10,6 +10,7 @@ body{
     margin: 0;
     padding: 0;
     background-image: url("slike/background.jpg");
+    background-attachment: fixed;
 }
 #header {
     margin: 0;
@@ -159,6 +160,23 @@ body{
     padding: 3%;
 
 }
+
+#signin{
+    
+    align:center;
+    position:relative;
+   
+    
+    width:30%;
+    height:fit-content;
+    margin: auto;
+    border-radius: 5% 5% 0% 0%;
+    
+    background-color: #aaaaaad3;
+    padding: 3%;
+
+}
+
 .loginbtn{
 
     background-color: #4b3328;
@@ -168,6 +186,19 @@ body{
     border: none;
     cursor: pointer;
     width: 100%;
+ 
+}
+.katalogbtn{
+
+    background-color: #83300a;
+    color: white;
+    padding: 14px 20px;
+    margin-left:10%;
+    margin-top:5%;
+    font-size:large;
+    border: none;
+    cursor: pointer;
+    width: 40%;
  
 }
 
@@ -189,17 +220,18 @@ button:hover {
     opacity: 0.8;
 }
 
-#login input[type=text], input[type=password] {
+#login input[type=text], [type=password],[type=email], #signin input[type=text],[type=password],[type=email],[type=date],[type=file],textarea {
     width: 100%;
     padding: 12px 20px;
     margin-top:2%;
+    background-color: #ffffff;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
     margin-bottom: 5%;
 }
   
-#login label{
+#login label,#signin label{
     margin-top: 10px;
     font-size: 30px   ;
 }
