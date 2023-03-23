@@ -10,13 +10,24 @@
 <body>
     <div id="login">
         <h1>LOG IN</h1>
-        <label for="uname">Username</label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-        <label for="psw">Password</label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <form action="korisnikMain.html">
+            <label for="">Username</label>
+            <input type="text" placeholder="Enter Username" >
+            <label for="">Password</label>
+            <input type="password" placeholder="Enter Password" >
 
-        <button type="button" class="loginbtn">Log in</button>
-        <button  type="button" class="resetPassbtn">Forgot password?</button>
+            <input type="submit" value="Log in korisnik" class="loginbtn">
+        </form>
+        <form action="autorMain.html">
+            <input type="submit" value="Log in autor" class="loginbtn">
+        </form>
+        <form action="kucaMain.html">
+            <input type="submit" value="Log in izdavacka kuca" class="loginbtn">
+        </form>
+        <form action="passReset.html">
+            <input type="submit" value="Forgot password?" class="resetPassbtn">
+        </form>    
+       
     </div>
     
 
