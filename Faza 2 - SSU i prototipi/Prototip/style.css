@@ -22,7 +22,9 @@ body{
 }
 
 .menu {
+    /* position:absolute; */
     overflow: hidden;
+    height:5%;
     background-color: #774740;
 }
   
@@ -70,6 +72,14 @@ body{
     margin: 0 auto;
 }
 
+.rowAut{
+    /* width:fit-content; */
+    display: flex;
+    flex-direction: row;
+    height:fit-content;
+
+}
+
 .signUpCont{
     position:relative;
     font-size: 30px;
@@ -86,6 +96,11 @@ body{
    
     background-color: #aaaaaaef;
    
+}
+.ocena{
+    margin-left:5%;
+    float:right;
+
 }
 
 .signUpCont a{
@@ -118,6 +133,7 @@ body{
 .side {
     flex: 30%;
     color:white;
+    position:relative;
     /* background-color: #b69090; */
     padding: 20px;
     flex-wrap: wrap;
@@ -125,12 +141,34 @@ body{
 }
 
 .main {
+    height:fit-content;
     flex: 70%;
     background-color: rgba(129, 118, 118, 0.778);
 
     padding: 20px;
 }
 
+.sideName{
+    position: absolute;
+    display: flex;
+    height: 10%;
+    background-color: rgba(129, 118, 118, 0.778);
+    flex-direction: row;
+}
+
+.sideName>.account{
+    
+    background-color: rgba(129, 118, 118, 0.778);
+    padding: 20px;
+    margin-left:5%;
+    width:fit-content;
+    border-radius: 5%;
+
+}
+.sideName>.pic{
+    margin-left:5%;
+
+}
 
 .fakeimg {
     background-color: #aaa;
@@ -176,6 +214,46 @@ body{
     padding: 3%;
 
 }
+.searchbtn{
+    position:relative;
+    background-color: #83300a;
+    color: white;
+    padding: 10px 20px;
+
+    
+    font-size:large;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    height: 100%;
+    /* margin:auto; */
+    /* align-self: center; */
+    
+ 
+}
+
+.opis{
+    float:left;
+    margin-left:5%;
+    font-size: larger;
+}
+.profilna{
+
+    float:left;
+    width:25%;
+}
+
+.gallery{
+
+
+    float: left;
+    width: 25%;
+}
+
+.gallery img {
+  width:95%;
+  height: 100%;
+}
 
 .loginbtn{
 
@@ -193,12 +271,12 @@ body{
     background-color: #83300a;
     color: white;
     padding: 14px 20px;
-    margin-left:10%;
-    margin-top:5%;
+    margin-bottom: 10%;
+    
     font-size:large;
     border: none;
     cursor: pointer;
-    width: 40%;
+    width: fit-content;
  
 }
 
