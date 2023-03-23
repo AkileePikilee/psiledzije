@@ -266,6 +266,19 @@ body{
     width: 100%;
  
 }
+.editBut{
+    float:right;
+    background-color: #83300a;
+    color: white;
+    padding: 14px 20px;
+   
+    margin-top:2%;
+    font-size:large;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+
+}
 .katalogbtn{
 
     background-color: #83300a;
