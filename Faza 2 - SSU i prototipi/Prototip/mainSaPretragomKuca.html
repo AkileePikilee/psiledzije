@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Citaj, ne skitaj</title>
+</head>
+<body>
+    
+    <div id="header">
+    </div>
+   
+    <div class="menu">
+        <form action="mainSaPretragom.html">
+          <input type="text" placeholder="Search..">
+          <select name="Tip Pretrage" class="customSelect">
+              <option value="knjiga">Knjiga</option>
+              <option value="Autor">Autor</option>
+              <option value="Kuca">Kuca</option>
+            </select>
+            <select name="Filter" class="customSelect">
+              <option value="ocenaRast">ocena rastuce</option>
+              <option value="ocenaOpad">ocena opadajuce</option>
+      
+            </select>
+            <input type="submit" value="Search" class="searchbtn">
+            <a class="logSgn" href="index.html">Log out</a>
+            <a class="logSgn" href="kucaAcc.html">Account</a>
+        </form>
+    </div> 
+    
+
+
+    <div class="row">
+      <div class="main">
+            
+        <div class="gallery">
+            <label>PRIMER AUTORA</label>
+            <a  href="oAutoru.html">
+              <img src="slike/placeholder.jpg" >
+            </a>
+            
+          </div>
+          
+          <div class="gallery">
+            <div>PRIMER KNJIGE</div>
+            <a  href="oKnjizi.html">
+              <img src="slike/placeholder.jpg" >
+            </a>
+            
+          </div>
+          
+          <div class="gallery">
+            <div>PRIMER IZDAVACKE KUCE</div>
+
+            <a  href="oIzdKuci.html">
+              <img src="slike/placeholder.jpg" >
+            </a>
+           
+          </div>
+          
+          <div class="gallery">
+            <a  href="">
+              <img src="slike/placeholder.jpg" >
+            </a>
+            
+          </div>
+    </div>
+        <div class="side">
+            <div class="sideName">
+                <h2 class="account">USERNAME</h2>
+                <img class="pic" src="slike/avatar.png">
+          
+            </div>
+          
+          
+        </div>
+   
+      </div>
+</body>
+</html>
