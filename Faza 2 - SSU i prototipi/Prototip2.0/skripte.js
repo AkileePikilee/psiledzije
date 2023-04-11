@@ -46,12 +46,20 @@ function logAdmin(){
 // </ul> */}
 
 function logOut(){
-debugger;
+
     document.cookie="username=0";
 }
 
 
+function resetLozinke(){
+debugger;
+    // poljeLoz=document.getElementsByName("poljeLozinka")[0];
+    // poljeLoz.value="rrr";
+    // poljeLoz.placeholder="rrr";
 
+    document.getElementsByName('poljeLozinka')[0].placeholder = 'SIFRASIFRA';
+    
+}
 
 function inicijalizujStranicu(){
    

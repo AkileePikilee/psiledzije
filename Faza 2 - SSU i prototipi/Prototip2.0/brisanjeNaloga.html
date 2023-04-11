@@ -1,0 +1,81 @@
+<!-- Autor: Ljubica Muravljov -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+        <script src="skripte.js"></script>
+
+        <link rel="stylesheet" href="style.css">
+        <title>Brisanje naloga</title>
+    </head>
+    <body>
+        <div class="container-fluid" style="margin:0; padding:0;">
+            <div class="row col-sm-12 " style="padding:0; width:100%; margin: 0;">
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="marign:0; padding:5;">
+                    <div class="container-fluid ">
+                        <a href="index.html" class="logo">
+                            <img src="slike/logo.png" alt="" style="width: 80px;">
+                        </a>
+
+
+                    </div>
+
+                </nav>
+            </div>
+            <div id="login">
+                <h1>BRISANJE NALOGA</h1>
+                <form action="resetLozinke.html" onsubmit="resetLozinke()">
+                    <label for="">E-mail</label>
+                    <input type="email" placeholder="Unesi E-mail" >
+
+                    <label for="">Korisničko ime</label>
+                    <input type="text" placeholder="Unesi korisničko ime" >
+
+                    <button type="button" class="btn btn-light resetPassbtn " data-toggle="modal" data-target="#exampleModalCenter">
+                        Obriši nalog
+                    </button>
+                </form>
+
+         
+                
+            
+            </div>
+           
+        
+        </div>
+    
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Brisanje naloga</h5>
+                <button  class="btn-outline-dark" data-dismiss="modal" >
+                    <!-- <span aria-hidden="true">&times;</span> -->
+                    X
+                </button>
+                </div>
+                <div class="modal-body">
+                    <br>
+                    Da li ste sigurni da želite da obrišete korisnički nalog?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Potvrdi</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Poništi</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </body>
+</html>
