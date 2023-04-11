@@ -1,0 +1,59 @@
+Moderator brisemo -> postaje administrator 
+
+6.1 ssu prebaci vracanje -> resetovanje
+Treba da radi na principu:
+-Korisnik klikne forgot password
+-Prikazuje se poruka: Posaljite mail sa vaseg emaila accounta na pedja.administrator@citajneskitaj.rs sa naslovom ZABORAVLJENA LOZINKA - <korime>
+-*VAN SISTEMA* korisnik salje mail
+-*VAN SISTEMA* administrator dobija mail
+-administrator u svom panelu bira generisanje nove lozinke za korime
+-*VAN SISTEMA* administrator salje mail sa korisnikovom novom lozinkom
+
+Azurirati svaki SSU
+SVAKI ULOGOVANI KORISNIK MOZE DA POSTAVLJA SADRZAJ
+SVAKI ULOGOVANI KORISNIK MOZE DA SE PRETPLATI NA DRUGOG KORISNIKA
+
+Dodati u SSU 6.3
+Uklanjanje i banovanje -> uklanjanje (prepraviti SSU)
+-pri uklanjanju brisati njegove recenzije (komentare) [ponovo izracunati srednju ocenu ako je redundantna], recenzije na njegovom profilu, njegove objave, izbrisati ga iz pracenih profila profilima koji ga prate, kao i izbrisati ga iz pratilaca profila koje on prati, 
+-ostaviti licitacije koje je napravio, u kojima je ucestvovao a obrisati ga iz onih u kojima trenutno ucestvuje
+-potencijalno flegovati kao BANOVAN (u tekucim licitacijama)
+
+SSU 2.1
+dodati korisnike u pretragu
+
+SSU 3.
+5,6 -> 6,7
+
+NOVI SSU 3.5
+-pregled licne kolekcije
+SSU 3.6, 3.7 dodaj autore uz korisnike
+
+SSU 4.1
+Pregled profila korisnika (azuriraj) + katalog knjiga + povezane kuće/autori (posebni scenariji)
+.2, .3, .4 sadržaj mogu svi da postave! (izbriši samo autor i kuća)
+
+SSU 5.3
+Pregled licitacija je na posebno dugme sa profila autora/kuce
+
+SSU 5.4
+Napisi da se dodaje nova knjiga u katalog autora i kuce
+
+KATALOG KNJIGA - do sada objavljena dela
+KOLEKCIJA - korisnikova kolekcija dela
+(autor treba da ima oba)
+
+Prototip:
+-katalog knjiga (pregled, brisanje, dodavanje)
+-kolekcije (pregled, brisanje, dodavanje)
+-licitacije (realizacija)
+-licitacije - posebno dugme za posebnu stranicu sa licitacijama!
+-profil - broj pratilaca, 
+	-za autora u kojim je kućama
+	-za kuću koje autore ima
+-objava knjige
+-administrator stranica (sa dodatnom funkciom reseta passworda!)
+
+AKO STIGNEMO:
+	-izdavacka kuca ne bi trebalo da ostavlja recenzije
+	-verifikacija izdavacke kuce
