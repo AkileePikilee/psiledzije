@@ -52,12 +52,27 @@ function logOut(){
 
 
 function resetLozinke(){
-debugger;
-    // poljeLoz=document.getElementsByName("poljeLozinka")[0];
+// debugger;
+    poljeLoz=document.getElementById("promenaLozinke");
     // poljeLoz.value="rrr";
-    // poljeLoz.placeholder="rrr";
+    var randomstring = Math.random().toString(36).slice(-8);
+    poljeLoz.placeholder=randomstring;
+    // <label for="">Lozinka</label>
+    // <input type="text"  id="poljeLozinka" name="poljeLozinka" disabled >
+    // document.getElementsByName('poljeLozinka')[0].placeholder = 'SIFRASIFRA';
 
-    document.getElementsByName('poljeLozinka')[0].placeholder = 'SIFRASIFRA';
+
+
+    // let forma=document.getElementById("promenaLozinke");
+    // // let labela=document.createElement(label);
+    // // labela.innerText="Lozinka";
+    // let inp=document.createElement("input");
+    // inp.type="text";
+    // inp.placeholder="7XX^m:8";
+    // // inp.disabled=true;
+
+    // // forma.appendChild(labela);
+    // forma.appendChild(inp);
     
 }
 

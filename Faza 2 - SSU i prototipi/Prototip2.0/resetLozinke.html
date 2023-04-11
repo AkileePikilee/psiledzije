@@ -34,18 +34,22 @@
             </div>
             <div id="login">
                 <h1>PROMENA LOZINKE</h1>
-                <form action="resetLozinke.html" onsubmit="resetLozinke()">
+                <form action="">
                     <label for="">E-mail</label>
                     <input type="email" placeholder="Unesi E-mail" >
 
                     <label for="">Korisničko ime</label>
                     <input type="text" placeholder="Unesi korisničko ime" >
-                    <label for="">Lozinka</label>
-                    <input type="text"  id="poljeLozinka" name="poljeLozinka" disabled >
 
-                    <input type="submit" value="Promeni lozinku" class="loginbtn" >
+                    <label for="">Lozinka</label>
+                    <input type="text" placeholder="" id="promenaLozinke" disabled>
+ 
+
+                    <!-- <input type="submit" value="Promeni lozinku" class="loginbtn" > -->
                 </form>
-         
+                <button  class="loginbtn" onclick="resetLozinke()" >
+                    Promeni lozinku
+                </button>
                 
             
             </div>
