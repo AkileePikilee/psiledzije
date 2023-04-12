@@ -1,18 +1,18 @@
-'Dodaj recenziju' na stranicama ne radi nista.
-Ne postoje recenzije na stranici oAutoru
-oKuci je prazna stranica
+Reseno	Dodaj recenziju' na stranicama ne radi nista.    
+Reseno	Ne postoje recenzije na stranici oAutoru   		
+Reseno	oKuci je prazna stranica
 fali account.html (kad se klikne nalog u headeru)
-stranica oKorisniku prazna
+Reseno	stranica oKorisniku prazna
 
-kao neregistroan korisnik:
-	ne vidim objave ni recenzije na stranici autora
-	stranica za izdavacka kuca ne postoji
+Reseno	kao neregistroan korisnik:
+Reseno		ne vidim objave ni recenzije na stranici 
+Reseno		stranica za izdavacka kuca ne postoji
 	
-sa stranice za registraciju, ispravno povezati stranice za registraciju pojedinih kategorija (autorReg...)
+Reseno	sa stranice za registraciju, ispravno povezati stranice za registraciju pojedinih kategorija (autorReg...)
 
-registracija IzdavackeKuce - dodaj lokaciju ne radi kako treba (ne radi nista)
+Reseno	registracija IzdavackeKuce - dodaj lokaciju ne radi kako treba (ne radi nista)
 
-ukloniti 'promocije' iz headera administratora
+Reseno	ukloniti 'promocije' iz headera administratora
 
 Promena lozinke - administrator:
 	ne bi bilo lose zabraniti dugme za promenu lozinke kad se klikene (posle, JavaScript)

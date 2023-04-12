@@ -116,17 +116,6 @@ function inicijalizujStranicu()
             lista.appendChild(listel);
 
             link=document.createElement("a");
-            link.href="promocije.html";
-            link.classList.add("nav-link");
-            link.innerText="Promocije";
-
-            listel=document.createElement("li");
-            listel.classList.add("nav-item");
-
-            listel.appendChild(link);
-            lista.appendChild(listel);
-
-            link=document.createElement("a");
             link.href="licitaicje.html";
             link.classList.add("nav-link");
             link.innerText="Licitacije";
