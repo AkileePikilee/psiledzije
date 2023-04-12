@@ -1,0 +1,41 @@
+'Dodaj recenziju' na stranicama ne radi nista.
+Ne postoje recenzije na stranici oAutoru
+oKuci je prazna stranica
+fali account.html (kad se klikne nalog u headeru)
+stranica oKorisniku prazna
+
+kao neregistroan korisnik:
+	ne vidim objave ni recenzije na stranici autora
+	stranica za izdavacka kuca ne postoji
+	
+sa stranice za registraciju, ispravno povezati stranice za registraciju pojedinih kategorija (autorReg...)
+
+registracija IzdavackeKuce - dodaj lokaciju ne radi kako treba (ne radi nista)
+
+ukloniti 'promocije' iz headera administratora
+
+Promena lozinke - administrator:
+	ne bi bilo lose zabraniti dugme za promenu lozinke kad se klikene (posle, JavaScript)
+	
+lep je popup za brisanje naloga :D
+
+administrator:
+	tri tacke kod objave na profilu ne rade nista
+
+!!!!!!!!!!!!
+Omoguciti promenu slike pri promeni info o profilu 
+
+promena korisnicke sifre treba da bude dostupna kao stranica do koje se dodje sa sopstvenog profila
+
+promena informacija o nalogu (cela nam fali)
+------------
+Napraviti SSU 2.4 - prikaz tudjeg profila
+scenario 1: prikaz profila obicnog korisnika / admina (isti su)
+scenario 2: prikaz profila autora
+scenario 3: prikaz profila izdavacke kuce
+
+Napraviti SSU 2.5 - prikaz sopstvenog profila
+scenario 1: prikaz sopstvenog profila obicnog korisnika
+scenario 2: prikaz sopstvenog profila autora
+scenario 3: prikaz sopstvenog profila izdavacke kuce
+scenario 4: prikaz sopstvenog profila administratora
