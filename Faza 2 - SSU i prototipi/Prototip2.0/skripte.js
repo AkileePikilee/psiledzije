@@ -46,6 +46,11 @@ function resetLozinke()
     var randomstring = Math.random().toString(36).slice(-8);
     poljeLoz.placeholder=randomstring;
 }
+function ukloniRec()
+{
+    var pop=document.getElementById("novaRec")
+    pop.style="display:none;"
+}
 
 function inicijalizujStranicu()
 {
@@ -89,13 +94,35 @@ function inicijalizujStranicu()
     {
         {
             let link=document.createElement("a");
-            link.href="promocije.html";
+            link.href="resetLozinke.html";
             link.classList.add("nav-link");
-            link.innerText="Promocije";
+            link.innerText="Resetovanje lozinke";
 
             let listel=document.createElement("li");
             listel.classList.add("nav-item");
             
+            listel.appendChild(link);
+            lista.appendChild(listel);
+
+            link=document.createElement("a");
+            link.href="brisanjeNaloga.html";
+            link.classList.add("nav-link");
+            link.innerText="Brisanje Naloga";
+
+            listel=document.createElement("li");
+            listel.classList.add("nav-item");
+
+            listel.appendChild(link);
+            lista.appendChild(listel);
+
+            link=document.createElement("a");
+            link.href="promocije.html";
+            link.classList.add("nav-link");
+            link.innerText="Promocije";
+
+            listel=document.createElement("li");
+            listel.classList.add("nav-item");
+
             listel.appendChild(link);
             lista.appendChild(listel);
 
@@ -134,34 +161,34 @@ function inicijalizujStranicu()
             lista.appendChild(listel);
         }
 
-        dugme=document.createElement("input");
-        dugme.type="submit";
-        dugme.classList.add("loginbtn");
-        dugme.value="Resetovanje zaboravljene lozinke";
+        // dugme=document.createElement("input");
+        // dugme.type="submit";
+        // dugme.classList.add("loginbtn");
+        // dugme.value="Resetovanje zaboravljene lozinke";
         
-        forma=document.createElement("form");
-        forma.action="resetLozinke.html";
+        // forma=document.createElement("form");
+        // forma.action="resetLozinke.html";
 
-        forma.appendChild(dugme);
+        // forma.appendChild(dugme);
         
-        desniDeo.appendChild(document.createElement("br"));
-        desniDeo.appendChild(document.createElement("br"));
-        desniDeo.appendChild(forma);
-        desniDeo.appendChild(document.createElement("br"));
-        desniDeo.appendChild(document.createElement("br"));
+        // desniDeo.appendChild(document.createElement("br"));
+        // desniDeo.appendChild(document.createElement("br"));
+        // desniDeo.appendChild(forma);
+        // desniDeo.appendChild(document.createElement("br"));
+        // desniDeo.appendChild(document.createElement("br"));
 
-        dugme=document.createElement("input");
-        dugme.type="submit";
-        dugme.classList.add("loginbtn");
-        dugme.value="Brisanje korisničkog naloga";
+        // dugme=document.createElement("input");
+        // dugme.type="submit";
+        // dugme.classList.add("loginbtn");
+        // dugme.value="Brisanje korisničkog naloga";
 
-        forma=document.createElement("form");
-        forma.action="brisanjeNaloga.html";
+        // forma=document.createElement("form");
+        // forma.action="brisanjeNaloga.html";
 
-        forma.appendChild(dugme);
-        desniDeo.appendChild(forma);
-        desniDeo.appendChild(document.createElement("br"));
-        desniDeo.appendChild(document.createElement("br"));
+        // forma.appendChild(dugme);
+        // desniDeo.appendChild(forma);
+        // desniDeo.appendChild(document.createElement("br"));
+        // desniDeo.appendChild(document.createElement("br"));
     }
     else{
         if(ulogovan=="3")
@@ -260,6 +287,11 @@ function popUpPretpl(){
     alert("Pretplatili ste se na autora");  
 }
 
+function dodajRec(){
+    var pop=document.getElementById("novaRec")
+    pop.style="display:block; padding:15px; "
+}
+
 function inicijalizujStranicuOKnjizi()
 {
     inicijalizujStranicu();
@@ -349,10 +381,11 @@ function inicijalizujStranicuOKnjizi()
     ispod.appendChild(recenzijeDiv);
     if(ulogovan!="0")
     {
+   
         let dodajRecBtn=document.createElement("button")
         dodajRecBtn.classList.add("katalogbtn");
         dodajRecBtn.innerText="Dodaj recenziju";
-        
+        dodajRecBtn.onclick=dodajRec
         dodajRecDiv.appendChild(dodajRecBtn)
 
         ispod.appendChild(dodajRecDiv)
@@ -362,11 +395,194 @@ function inicijalizujStranicuOKnjizi()
 function inicijalizujStranicuOKorisniku()
 {
     inicijalizujStranicu();
+
+    let infoKnjiga=document.getElementById("infoKnjiga");
+    let slikaDiv=document.createElement("div");
+    slikaDiv.classList.add("col-sm-4");
+
+    let slikaKnjige=document.createElement("img");
+    slikaKnjige.classList.add("profilna");
+    slikaKnjige.src=("slike/avatar.png");
+    slikaKnjige.style="height:fit-content;"
+
+    slikaDiv.appendChild(slikaKnjige);
+    infoKnjiga.appendChild(slikaDiv);
+    let opis=document.createElement("div");
+    opis.classList.add("col-sm-8")
+
+    let naziv=document.createElement("h1");
+    naziv.innerText="Ime Prezime";
+    opis.appendChild(naziv);
+
+    let ocena=document.createElement("h3");
+    ocena.innerText="4.5/5";
+    ocena.style="margin-bottom:5%;";
+    opis.appendChild(ocena);
+
+    let Mail=document.createElement("h5");
+    Mail.innerText="email@gmail.com";
+    opis.appendChild(Mail);
+
+
+    let biografija=document.createElement("h5")
+    biografija.innerText="Biografija \n Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\nAenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus \n et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, \npellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.";
+    opis.appendChild(biografija);
+
+    ulogovan=document.cookie.split("; ").find((row) => row.startsWith("username="))?.split("=")[1];
+    if(ulogovan!="0")
+    { 
+        let katalogDugme=document.createElement("button");
+        katalogDugme.type="button";
+        katalogDugme.classList.add("katalogbtn");
+        katalogDugme.innerText="Pretplati se";
+        katalogDugme.onclick=popUpPretpl;
+        opis.appendChild(document.createElement("br"));
+        opis.appendChild(document.createElement("br"));
+        opis.appendChild(katalogDugme);
+    }
+
+    infoKnjiga.appendChild(opis);
+
+    
+    let ispod=document.getElementById("recenzije");
+    let recenzijeDiv=document.createElement("div");
+    let dodajRecDiv=document.createElement("div")
+    recenzijeDiv.classList.add("col-sm-8","main");
+    dodajRecDiv.classList.add("col-sm-4");
+    dodajRecDiv.style="padding-left:10px;";
+
+    for(let i=0;i<2;i++)
+    {
+        if(ulogovan=="4")
+        {
+            let editBtn=document.createElement("button");
+            editBtn.classList.add("editBtn");
+            editBtn.innerText="...";
+            recenzijeDiv.appendChild(editBtn);
+        }
+
+
+        let rec=document.createElement("h2");
+        rec.innerText="Objava";
+
+        let slika=document.createElement("img");
+        slika.classList.add("fakeimg");
+        
+        
+        recenzijeDiv.appendChild(rec);
+        recenzijeDiv.appendChild(slika);
+
+    }
+    
+    ispod.appendChild(recenzijeDiv);
+    if(ulogovan!="0")
+    {
+        let dodajRecBtn=document.createElement("button")
+        dodajRecBtn.classList.add("katalogbtn");
+        dodajRecBtn.innerText="Dodaj recenziju";
+        dodajRecBtn.onclick=dodajRec;
+        dodajRecDiv.appendChild(dodajRecBtn)
+
+        ispod.appendChild(dodajRecDiv)
+    }   
 }
 
 function inicijalizujStranicuOKuci()
 {
     inicijalizujStranicu();
+
+    let infoKnjiga=document.getElementById("infoKnjiga");
+    let slikaDiv=document.createElement("div");
+    slikaDiv.classList.add("col-sm-4");
+
+    let slikaKnjige=document.createElement("img");
+    slikaKnjige.classList.add("profilna");
+    slikaKnjige.src=("slike/avatar.png");
+    slikaKnjige.style="height:fit-content;"
+
+    slikaDiv.appendChild(slikaKnjige);
+    infoKnjiga.appendChild(slikaDiv);
+    let opis=document.createElement("div");
+    opis.classList.add("col-sm-8")
+
+    let naziv=document.createElement("h1");
+    naziv.innerText="Naziv";
+    opis.appendChild(naziv);
+
+    let ocena=document.createElement("h3");
+    ocena.innerText="4.5/5";
+    ocena.style="margin-bottom:5%;";
+    opis.appendChild(ocena);
+
+    let Mail=document.createElement("h5");
+    Mail.innerText="email@gmail.com";
+    opis.appendChild(Mail);
+
+    let adresa=document.createElement("h5");
+    adresa.innerText="Ulica 5";
+    opis.appendChild(adresa);
+
+    let biografija=document.createElement("h5")
+    biografija.innerText="Istorija \n Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\nAenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus \n et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, \npellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.";
+    opis.appendChild(biografija);
+
+    ulogovan=document.cookie.split("; ").find((row) => row.startsWith("username="))?.split("=")[1];
+    if(ulogovan!="0")
+    { 
+        let katalogDugme=document.createElement("button");
+        katalogDugme.type="button";
+        katalogDugme.classList.add("katalogbtn");
+        katalogDugme.innerText="Pretplati se";
+        katalogDugme.onclick=popUpPretpl;
+        opis.appendChild(document.createElement("br"));
+        opis.appendChild(document.createElement("br"));
+        opis.appendChild(katalogDugme);
+    }
+
+    infoKnjiga.appendChild(opis);
+
+    
+    let ispod=document.getElementById("recenzije");
+    let recenzijeDiv=document.createElement("div");
+    let dodajRecDiv=document.createElement("div")
+    recenzijeDiv.classList.add("col-sm-8","main");
+    dodajRecDiv.classList.add("col-sm-4");
+    dodajRecDiv.style="padding-left:10px;";
+
+    for(let i=0;i<2;i++)
+    {
+        if(ulogovan=="4")
+        {
+            let editBtn=document.createElement("button");
+            editBtn.classList.add("editBtn");
+            editBtn.innerText="...";
+            recenzijeDiv.appendChild(editBtn);
+        }
+
+
+        let rec=document.createElement("h2");
+        rec.innerText="Objava";
+
+        let slika=document.createElement("img");
+        slika.classList.add("fakeimg");
+        
+        
+        recenzijeDiv.appendChild(rec);
+        recenzijeDiv.appendChild(slika);
+
+    }
+    
+    ispod.appendChild(recenzijeDiv);
+    if(ulogovan!="0")
+    {
+        let dodajRecBtn=document.createElement("button")
+        dodajRecBtn.classList.add("katalogbtn");
+        dodajRecBtn.innerText="Dodaj recenziju";
+        dodajRecBtn.onclick=dodajRec;
+        dodajRecDiv.appendChild(dodajRecBtn)
+
+        ispod.appendChild(dodajRecDiv)
+    }
 }
 
 function inicijalizujStranicuOAutoru()
@@ -416,53 +632,50 @@ function inicijalizujStranicuOAutoru()
         opis.appendChild(document.createElement("br"));
         opis.appendChild(document.createElement("br"));
         opis.appendChild(katalogDugme);
-
-        let ispod=document.getElementById("recenzije");
-        let recenzijeDiv=document.createElement("div");
-        let dodajRecDiv=document.createElement("div")
-        recenzijeDiv.classList.add("col-sm-8","main");
-        dodajRecDiv.classList.add("col-sm-4");
-        dodajRecDiv.style="padding-left:10px;";
-    
-        for(let i=0;i<2;i++)
-        {
-            if(ulogovan=="4")
-            {
-                let editBtn=document.createElement("button");
-                editBtn.classList.add("editBtn");
-                editBtn.innerText="...";
-                recenzijeDiv.appendChild(editBtn);
-            }
-    
-    
-            let rec=document.createElement("h2");
-            rec.innerText="Objava";
-    
-            let slika=document.createElement("img");
-            slika.classList.add("fakeimg");
-            
-            
-            recenzijeDiv.appendChild(rec);
-            recenzijeDiv.appendChild(slika);
-    
-        }
-        
-        ispod.appendChild(recenzijeDiv);
-        if(ulogovan!="0")
-        {
-            let dodajRecBtn=document.createElement("button")
-            dodajRecBtn.classList.add("katalogbtn");
-            dodajRecBtn.innerText="Dodaj recenziju";
-            
-            dodajRecDiv.appendChild(dodajRecBtn)
-    
-            ispod.appendChild(dodajRecDiv)
-        }
-
     }
 
     infoKnjiga.appendChild(opis);
 
-
     
+    let ispod=document.getElementById("recenzije");
+    let recenzijeDiv=document.createElement("div");
+    let dodajRecDiv=document.createElement("div")
+    recenzijeDiv.classList.add("col-sm-8","main");
+    dodajRecDiv.classList.add("col-sm-4");
+    dodajRecDiv.style="padding-left:10px;";
+
+    for(let i=0;i<2;i++)
+    {
+        if(ulogovan=="4")
+        {
+            let editBtn=document.createElement("button");
+            editBtn.classList.add("editBtn");
+            editBtn.innerText="...";
+            recenzijeDiv.appendChild(editBtn);
+        }
+
+
+        let rec=document.createElement("h2");
+        rec.innerText="Objava";
+
+        let slika=document.createElement("img");
+        slika.classList.add("fakeimg");
+        
+        
+        recenzijeDiv.appendChild(rec);
+        recenzijeDiv.appendChild(slika);
+
+    }
+    
+    ispod.appendChild(recenzijeDiv);
+    if(ulogovan!="0")
+    {
+        let dodajRecBtn=document.createElement("button")
+        dodajRecBtn.classList.add("katalogbtn");
+        dodajRecBtn.innerText="Dodaj recenziju";
+        dodajRecBtn.onclick=dodajRec;
+        dodajRecDiv.appendChild(dodajRecBtn)
+
+        ispod.appendChild(dodajRecDiv)
+    }
 }

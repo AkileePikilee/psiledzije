@@ -10,7 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css"> 
     <script src="skripte.js"> </script>
-    <title>Knjiga</title>
+
+    <title>Izdavačka kuća</title>
 </head>
 <body onload="inicijalizujStranicuOKuci()" style="padding:0;margin:0;">
     <div class="container-fluid" style="padding:0; margin:0;">
@@ -35,34 +36,37 @@
                     
                           </select>
                           <input type="submit" value="Pretraži" class="searchbtn"  style="float:left; height:38px;" >
-  
                       </form>
-
-
                 </div>
-
             </nav>
         </div>
         <div class="row" style="margin:0;" >
             <div class=" col-sm-8 main" id="levi">
-                <div class="row col-sm-12" id="leviDeo">
-
-                </div>
-
-                    
+                <div class="row col-sm-12" id="infoKnjiga"  style="margin-bottom:10px;"></div>
+                <div class="row col-sm-12" id="recenzije"></div>
             </div>
-                
-            <div class="col-sm-4 ">
-                <div id="desno">
-                    
+            <div class="popup " id="desno" style="width:50%; margin:auto;position:absolute; top:30%; left:25%; padding:0; background-color: rgb(233, 233, 233); height:fit-content;" >
+                <div class="popuptext" id="novaRec">
+                    <select name="" id="" class="form-select" style="width:fit-content">
+                        <option value="0">Unesi ocenu</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+        
+                    </select>
+                    <textarea id="" name="" rows="4" cols="50">Uneti komentar.</textarea> 
+                    <button class="katalogbtn" onclick="ukloniRec()">Objavi</button>
                 </div>
-
+        
+        
             </div>
+        
         </div>
             
 
 
-       
 
 
 
