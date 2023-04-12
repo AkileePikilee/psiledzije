@@ -160,3 +160,59 @@ body{
     flex-wrap: wrap;
     flex-grow: 1; */
 }
+.searchbtn{
+    /* position:relative; */
+    background-color: #17Bebb;
+    color: black;
+    
+    vertical-align: middle;
+    
+    font-size:large;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    height: 38px;
+
+    
+ 
+}
+.profilna{
+
+    float:left;
+    width:80%;
+    height:500px;
+}
+.katalogbtn{
+
+    background-color: #83300a;
+    color: white;
+    padding: 14px 20px;
+    margin-bottom: 10%;
+    
+    font-size:large;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    height:fit-content;
+ 
+}
+.editBtn{
+    float:right;
+    background-color: #83300a;
+    color: white;
+    padding: 14px 20px;
+   
+    margin-top:2%;
+    font-size:large;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+
+}
+
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+    height:200px;
+} 
