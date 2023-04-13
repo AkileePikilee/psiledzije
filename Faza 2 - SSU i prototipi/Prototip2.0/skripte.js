@@ -668,3 +668,7 @@ function inicijalizujStranicuOAutoru()
         ispod.appendChild(dodajRecDiv)
     }
 }
+
+function inicijalizujStranicuAccoutn(){
+    inicijalizujStranicu();
+}

@@ -43,34 +43,353 @@
         <div class="row" style="margin:0;" >
             <div class=" col-sm-8 main" id="levi">
                 <div class="row col-sm-12" id="infoKnjiga"  style="margin-bottom:10px;"></div>
-                <div class="row col-sm-12" id="recenzije"></div>
-            </div>
-            <div class="popup " id="desno" style="width:50%; margin:auto;position:absolute; top:30%; left:25%; padding:0; background-color: rgb(233, 233, 233); height:fit-content;" >
-                <div class="popuptext" id="novaRec">
-                    <select name="" id="" class="form-select" style="width:fit-content">
-                        <option value="0">Unesi ocenu</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-        
-                    </select>
-                    <textarea id="" name="" rows="4" cols="50">Uneti komentar.</textarea> 
-                    <button class="katalogbtn" onclick="ukloniRec()">Objavi</button>
+                <div class="row col-sm-12" id="recenzije">
+                    <h1>KOLEKCIJA KNJIGA</h1>
+                    <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
+                        <!-- Controls -->
+                        <div class="d-flex justify-content-center mb-4">
+                            <button class="carousel-control-prev position-relative" type="button" data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next position-relative" type="button" data-mdb-target="#carouselMultiItemExample" data-mdb-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!-- Inner -->
+                        <div class="carousel-inner py-4">
+                            <!-- Single item -->
+                            <div class="carousel-item active">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="card">
+                                                <a href="oKnjizi.html"> <img src="slike/placeholder.jpg" class="card-img-top" alt="Sunset Over the Sea"/> </a>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Knjiga 1</h5>
+                                                    <p class="card-text">
+                                                        Kratak opis knjige ili nesto
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 d-none d-lg-block">
+                                            <div class="card">
+                                                <a href="oKnjizi.html"> <img src="slike/placeholder.jpg" class="card-img-top" alt="Sunset Over the Sea"/> </a>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Knjiga 2</h5>
+                                                    <p class="card-text">
+                                                        Kratak opis knjige ili nesto
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 d-none d-lg-block">
+                                            <div class="card">
+                                                <a href="oKnjizi.html"> <img src="slike/placeholder.jpg" class="card-img-top" alt="Sunset Over the Sea"/> </a>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Knjiga 3</h5>
+                                                    <p class="card-text">
+                                                        Kratak opis knjige ili nesto
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Single item -->
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-12">
+                                            <div class="card">
+                                                <a href="oKnjizi.html"> <img src="slike/placeholder.jpg" class="card-img-top" alt="Sunset Over the Sea"/> </a>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Knjiga 4</h5>
+                                                    <p class="card-text">
+                                                        Kratak opis knjige ili nesto
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 d-none d-lg-block">
+                                            <div class="card">
+                                                <a href="oKnjizi.html"> <img src="slike/placeholder.jpg" class="card-img-top" alt="Sunset Over the Sea"/> </a>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Knjiga 5</h5>
+                                                    <p class="card-text">
+                                                        Kratak opis knjige ili nesto
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 d-none d-lg-block">
+                                            <div class="card">
+                                                <a href="oKnjizi.html"> <img src="slike/placeholder.jpg" class="card-img-top" alt="Sunset Over the Sea"/> </a>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Knjiga 6</h5>
+                                                    <p class="card-text">
+                                                        Kratak opis knjige ili nesto
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Single item -->
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                                            <div class="card">
+                                                <img src="slike/placeholder.jpg" class="card-img-top" alt="knjiga"/>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Knjiga 7</h5>
+                                                    <p class="card-text">
+                                                        Kratak opis knjige ili nesto
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                                            <div class="card">
+                                                <img src="slike/placeholder.jpg" class="card-img-top" alt="Sunset Over the Sea"/>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Knjiga 8</h5>
+                                                    <p class="card-text">
+                                                        Kratak opis knjige ili nesto
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                                            <div class="card">
+                                                <img src="slike/placeholder.jpg" href="oKnjizi.html" class="card-img-top" alt="Knjiga"/>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Knjiga 9</h5>
+                                                    <p class="card-text">
+                                                        Kratak opis knjige ili nesto
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- Inner -->
+                        </div>
+
+
+
+                    </div>
+
+
+                    <h1>KATALOG KNJIGA</h1> 
+                    <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
+                        <!-- Controls -->
+                        <div class="d-flex justify-content-center mb-4">
+                            <button class="carousel-control-prev position-relative" type="button" data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next position-relative" type="button" data-mdb-target="#carouselMultiItemExample" data-mdb-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!-- Inner -->
+                        <div class="carousel-inner py-4">
+                            <!-- Single item -->
+                            <div class="carousel-item active">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="card">
+                                                <a href="oKnjizi.html"> <img src="slike/placeholder.jpg" class="card-img-top" alt="Sunset Over the Sea"/> </a>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Knjiga 1</h5>
+                                                    <p class="card-text">
+                                                        Kratak opis knjige ili nesto
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 d-none d-lg-block">
+                                            <div class="card">
+                                                <a href="oKnjizi.html"> <img src="slike/placeholder.jpg" class="card-img-top" alt="Sunset Over the Sea"/> </a>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Knjiga 2</h5>
+                                                    <p class="card-text">
+                                                        Kratak opis knjige ili nesto
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 d-none d-lg-block">
+                                            <div class="card">
+                                                <a href="oKnjizi.html"> <img src="slike/placeholder.jpg" class="card-img-top" alt="Sunset Over the Sea"/> </a>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Knjiga 3</h5>
+                                                    <p class="card-text">
+                                                        Kratak opis knjige ili nesto
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Single item -->
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-12">
+                                            <div class="card">
+                                                <a href="oKnjizi.html"> <img src="slike/placeholder.jpg" class="card-img-top" alt="Sunset Over the Sea"/> </a>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Knjiga 4</h5>
+                                                    <p class="card-text">
+                                                        Kratak opis knjige ili nesto
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 d-none d-lg-block">
+                                            <div class="card">
+                                                <a href="oKnjizi.html"> <img src="slike/placeholder.jpg" class="card-img-top" alt="Sunset Over the Sea"/> </a>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Knjiga 5</h5>
+                                                    <p class="card-text">
+                                                        Kratak opis knjige ili nesto
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 d-none d-lg-block">
+                                            <div class="card">
+                                                <a href="oKnjizi.html"> <img src="slike/placeholder.jpg" class="card-img-top" alt="Sunset Over the Sea"/> </a>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Knjiga 6</h5>
+                                                    <p class="card-text">
+                                                        Kratak opis knjige ili nesto
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Single item -->
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                                            <div class="card">
+                                                <img src="slike/placeholder.jpg" class="card-img-top" alt="knjiga"/>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Knjiga 7</h5>
+                                                    <p class="card-text">
+                                                        Kratak opis knjige ili nesto
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                                            <div class="card">
+                                                <img src="slike/placeholder.jpg" class="card-img-top" alt="Sunset Over the Sea"/>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Knjiga 8</h5>
+                                                    <p class="card-text">
+                                                        Kratak opis knjige ili nesto
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                                            <div class="card">
+                                                <img src="slike/placeholder.jpg" href="oKnjizi.html" class="card-img-top" alt="Knjiga"/>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Knjiga 9</h5>
+                                                    <p class="card-text">
+                                                        Kratak opis knjige ili nesto
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- Inner -->
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+                <div class="popup " id="desno" style="width:50%; margin:auto;position:absolute; top:50%; left:25%; padding:0; background-color: rgb(233, 233, 233); height:fit-content;" >
+                    <div class="popuptext" id="novaRec">
+                        <select name="" id="" class="form-select" style="width:fit-content">
+                            <option value="0">Unesi ocenu</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+            
+                        </select>
+                        <textarea id="" name="" rows="4" cols="50">Uneti komentar.</textarea> 
+                        <button class="katalogbtn" onclick="ukloniRec()">Objavi</button>
+                    </div>
+            
+            
                 </div>
         
-        
             </div>
-        
-        </div>
             
 
 
 
 
 
-    </div>
+        </div>
 
-</body>
+    </body>
 </html>
