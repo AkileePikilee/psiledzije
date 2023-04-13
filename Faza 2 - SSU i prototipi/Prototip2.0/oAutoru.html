@@ -364,7 +364,9 @@
                     </div>
 
                 </div>
-                <div class="popup " id="desno" style="width:50%; margin:auto;position:absolute; top:50%; left:25%; padding:0; background-color: rgb(233, 233, 233); height:fit-content;" >
+
+
+                <div class="popup " id="desno" style="width:50%; margin:auto;position:absolute; top:30%; left:25%; padding:0; background-color: rgb(233, 233, 233); height:fit-content;" >
                     <div class="popuptext" id="novaRec">
                         <select name="" id="" class="form-select" style="width:fit-content">
                             <option value="0">Unesi ocenu</option>
@@ -376,7 +378,27 @@
             
                         </select>
                         <textarea id="" name="" rows="4" cols="50">Uneti komentar.</textarea> 
-                        <button class="katalogbtn" onclick="ukloniRec()">Objavi</button>
+                        <button class="katalogbtn btn-success" onclick="ukloniRec()">Objavi</button>
+                    </div>
+            
+            
+                </div>
+            
+                <div class="popup " id="meniRec" style="width:50%; margin:auto;position:absolute; top:30%; left:25%; padding:0; background-color: rgb(233, 233, 233); height:fit-content;" >
+                    <div class="popuptext" id="dropDownRec">
+                        <select name="" id="" class="form-select" style="width:fit-content">
+                            <option value="0">Unesi ocenu</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+            
+                        </select>
+                        <textarea id="" name="" rows="4" cols="50">Uneti komentar.</textarea> 
+                        <button class="katalogbtn btn-success" onclick="ukloniMeni()">Objavi</button>
+                        <button class="katalogbtn btn-danger" onclick="ukloniMeni()">Obriši</button>
+            
                     </div>
             
             
@@ -384,7 +406,44 @@
         
             </div>
             
+            <div class="col-sm-4 main">
+                
+                <div class="col-sm-10 main">
+                    <h2>Recenzija</h2>
+                    <img class="fakeimg">
+                    <h2>Recenzija</h2>
+                    <img class="fakeimg">
+                    <button class="editBtn" onclick="meniRec()">...</button>
+                    <h2>Recenzija</h2>
+                    <img class="fakeimg">
+                </div>
+                
 
+
+
+
+
+            </div>
+
+            <div class="popup " id="meniRec" style="width:50%; margin:auto;position:absolute; top:30%; left:25%; padding:0; background-color: rgb(233, 233, 233); height:fit-content;" >
+                <div class="popuptext" id="dropDownRec">
+                    <select name="" id="" class="form-select" style="width:fit-content">
+                        <option value="0">Unesi ocenu</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+        
+                    </select>
+                    <textarea id="" name="" rows="4" cols="50">Uneti komentar.</textarea> 
+                    <button class="katalogbtn btn-success" onclick="ukloniMeni()">Objavi</button>
+                    <button class="katalogbtn btn-danger" onclick="ukloniMeni()">Obriši</button>
+        
+                </div>
+        
+        
+            </div>
 
 
 
