@@ -126,7 +126,7 @@ function inicijalizujStranicu()
             lista.appendChild(listel);
 
             link=document.createElement("a");
-            link.href="licitaicje.html";
+            link.href="licitacije.html";
             link.classList.add("nav-link");
             link.innerText="Licitacije";
 
@@ -136,16 +136,16 @@ function inicijalizujStranicu()
             listel.appendChild(link);
             lista.appendChild(listel);
 
-            link=document.createElement("a");
-            link.href="account.html";
-            link.classList.add("nav-link");
-            link.innerText="Nalog";
+            // link=document.createElement("a");
+            // link.href="account.html";
+            // link.classList.add("nav-link");
+            // link.innerText="Nalog";
 
-            listel=document.createElement("li");
-            listel.classList.add("nav-item");
+            // listel=document.createElement("li");
+            // listel.classList.add("nav-item");
             
-            listel.appendChild(link);
-            lista.appendChild(listel);
+            // listel.appendChild(link);
+            // lista.appendChild(listel);
 
             link=document.createElement("a");
             link.href="index.html";
