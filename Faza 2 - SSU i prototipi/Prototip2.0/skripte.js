@@ -88,7 +88,7 @@ function inicijalizujStranicu()
         lista.appendChild(listel);
         desniDeo.style="padding:0px;"
         let leviDeo=document.getElementById("levi");
-        leviDeo.style="margin-left:16.666%;";
+        // leviDeo.style="margin-left:16.666%;";
     } 
     else if(ulogovan=="4")
     {
@@ -220,7 +220,8 @@ function inicijalizujStranicu()
     navmeni.appendChild(lista);
 }
 
-function inicijalizujStranicuPretraga(){
+function inicijalizujStranicuPretraga()
+{
     inicijalizujStranicu();
     levi=document.getElementById("leviDeo");
     naslov=document.createElement("h1");
@@ -268,17 +269,32 @@ function inicijalizujStranicuPretraga(){
 
 }
 
-function popUp(){
+function popUp()
+{
     alert("Knjiga je dodata u kolekciju!");
 }
 
-function popUpPretpl(){
+function popUpPretpl()
+{
     alert("Pretplatili ste se na autora");  
 }
 
-function dodajRec(){
+function dodajRec()
+{
     var pop=document.getElementById("novaRec")
     pop.style="display:block; padding:15px; "
+}
+
+function meniRec()
+{
+    var pop=document.getElementById("dropDownRec");
+    pop.style="display:block; padding:15px; "
+}
+
+function ukloniMeni()
+{
+    var pop=document.getElementById("dropDownRec")
+    pop.style="display:none;"
 }
 
 function inicijalizujStranicuOKnjizi()
@@ -324,7 +340,7 @@ function inicijalizujStranicuOKnjizi()
     opis.appendChild(opisKnjige);
 
     ulogovan=document.cookie.split("; ").find((row) => row.startsWith("username="))?.split("=")[1];
-    if(ulogovan!="0")
+    if(ulogovan!="0" && ulogovan!="3")
     { 
         let katalogDugme=document.createElement("button");
         katalogDugme.type="button";
@@ -351,6 +367,7 @@ function inicijalizujStranicuOKnjizi()
             let editBtn=document.createElement("button");
             editBtn.classList.add("editBtn");
             editBtn.innerText="...";
+            editBtn.onclick=meniRec;
             recenzijeDiv.appendChild(editBtn);
         }
 
@@ -366,7 +383,24 @@ function inicijalizujStranicuOKnjizi()
         recenzijeDiv.appendChild(slika);
 
     }
-    
+    let editBtn=document.createElement("button");
+    editBtn.classList.add("editBtn");
+    editBtn.innerText="...";
+    editBtn.onclick=meniRec;
+    recenzijeDiv.appendChild(editBtn);
+
+
+
+let rec=document.createElement("h2");
+rec.innerText="Recenzija";
+
+let slika=document.createElement("img");
+slika.classList.add("fakeimg");
+
+
+recenzijeDiv.appendChild(rec);
+recenzijeDiv.appendChild(slika);
+
     ispod.appendChild(recenzijeDiv);
     if(ulogovan!="0")
     {
@@ -667,4 +701,8 @@ function inicijalizujStranicuOAutoru()
 
         ispod.appendChild(dodajRecDiv)
     }
+}
+
+function inicijalizujStranicuAccount(){
+    inicijalizujStranicu();
 }
