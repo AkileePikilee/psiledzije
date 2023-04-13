@@ -498,6 +498,8 @@ function inicijalizujStranicuOKorisniku()
     }
     
     ispod.appendChild(recenzijeDiv);
+
+    let recDesno=document.getElementById("recenzijeDesno");
     if(ulogovan!="0")
     {
         let dodajRecBtn=document.createElement("button")
@@ -506,7 +508,7 @@ function inicijalizujStranicuOKorisniku()
         dodajRecBtn.onclick=dodajRec;
         dodajRecDiv.appendChild(dodajRecBtn)
 
-        ispod.appendChild(dodajRecDiv)
+        recDesno.appendChild(dodajRecDiv)
     }   
 }
 
@@ -596,6 +598,9 @@ function inicijalizujStranicuOKuci()
     }
     
     ispod.appendChild(recenzijeDiv);
+
+    let recDesno=document.getElementById("recenzijeDesno");
+
     if(ulogovan!="0")
     {
         let dodajRecBtn=document.createElement("button")
@@ -604,7 +609,7 @@ function inicijalizujStranicuOKuci()
         dodajRecBtn.onclick=dodajRec;
         dodajRecDiv.appendChild(dodajRecBtn)
 
-        ispod.appendChild(dodajRecDiv)
+        recDesno.appendChild(dodajRecDiv)
     }
 }
 
@@ -691,15 +696,18 @@ function inicijalizujStranicuOAutoru()
     }
     
     ispod.appendChild(recenzijeDiv);
+
+    let recDesno=document.getElementById("recenzijeDesno");
     if(ulogovan!="0")
     {
         let dodajRecBtn=document.createElement("button")
         dodajRecBtn.classList.add("katalogbtn");
         dodajRecBtn.innerText="Dodaj recenziju";
+        dodajRecBtn.style="width:fit-content; margin:0;"
         dodajRecBtn.onclick=dodajRec;
         dodajRecDiv.appendChild(dodajRecBtn)
 
-        ispod.appendChild(dodajRecDiv)
+        recDesno.appendChild(dodajRecDiv)
     }
 }
 
