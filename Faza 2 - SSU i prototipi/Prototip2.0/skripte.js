@@ -21,22 +21,32 @@
 function logKorisnik()
 {
     document.cookie="username=1";
+    document.cookie="account=0";
+
 }
 function logAutor()
 {
     document.cookie="username=2";
+    document.cookie="account=0";
+
 }
 function logIzdKuca()
 {
     document.cookie="username=3";
+    document.cookie="account=0";
+
 }
 function logAdmin()
 {
     document.cookie="username=4";
+    document.cookie="account=0";
+
 }
 function logOut()
 {
     document.cookie="username=0";
+    document.cookie="account=0";
+
 }
 
 
@@ -512,7 +522,7 @@ function inicijalizujStranicuOKorisniku()
     }   
 }
 
-function inicijalizujStranicuOKuci()
+function inicijalizujStranicuOKuci()    
 {
     inicijalizujStranicu();
 
@@ -613,6 +623,16 @@ function inicijalizujStranicuOKuci()
     }
 }
 
+function editObjavu(){
+    var pop=document.getElementById("editObj")
+    pop.style="display:block; padding:15px; "
+}
+
+function uploadEditObj(){
+    var pop=document.getElementById("editObj")
+    pop.style="display:none;"
+}
+
 function inicijalizujStranicuOAutoru()
 {
     inicijalizujStranicu();
@@ -650,13 +670,27 @@ function inicijalizujStranicuOAutoru()
     opis.appendChild(biografija);
 
     ulogovan=document.cookie.split("; ").find((row) => row.startsWith("username="))?.split("=")[1];
-    if(ulogovan!="0")
+    debugger;
+
+    account=document.cookie.split("; ").find((row) => row.startsWith("account="))?.split("=")[1];
+
+    if(ulogovan!="0" )
     { 
         let katalogDugme=document.createElement("button");
         katalogDugme.type="button";
         katalogDugme.classList.add("katalogbtn");
         katalogDugme.innerText="Pretplati se";
         katalogDugme.onclick=popUpPretpl;
+
+        if(ulogovan=="2" && account=="1")
+        {
+            // katalogDugme.classList.add("submit-button");
+            katalogDugme.innerText="Izmeni sadržaj";
+            katalogDugme.onclick=function(){
+                location.href="AutorReg.html";
+            }
+        }
+
         opis.appendChild(document.createElement("br"));
         opis.appendChild(document.createElement("br"));
         opis.appendChild(katalogDugme);
@@ -671,14 +705,25 @@ function inicijalizujStranicuOAutoru()
     recenzijeDiv.classList.add("col-sm-8","main");
     dodajRecDiv.classList.add("col-sm-4");
     dodajRecDiv.style="padding-left:10px;";
+    if(ulogovan=="2" && account=="1")
+    {
+        let dodajObj=document.createElement("button");
+        dodajObj.classList.add("katalogbtn");
+        dodajObj.innerText="Dodaj Objavu";
+        dodajObj.onclick=editObjavu;
+        recenzijeDiv.appendChild(dodajObj);
+    }
+   
 
     for(let i=0;i<2;i++)
     {
-        if(ulogovan=="4")
+        debugger;
+        if(ulogovan=="4" || (ulogovan=="2" && account=="1"))
         {
             let editBtn=document.createElement("button");
             editBtn.classList.add("editBtn");
             editBtn.innerText="...";
+            editBtn.onclick=editObjavu;
             recenzijeDiv.appendChild(editBtn);
         }
 
@@ -696,21 +741,129 @@ function inicijalizujStranicuOAutoru()
     }
     
     ispod.appendChild(recenzijeDiv);
+    if(account!="1"){
+        let recDesno=document.getElementById("recenzijeDesno");
+        if(ulogovan!="0" )
+        {
+            let dodajRecBtn=document.createElement("button")
+            dodajRecBtn.classList.add("katalogbtn");
+            dodajRecBtn.innerText="Dodaj recenziju";
+            dodajRecBtn.style="width:fit-content; margin:0;"
+            dodajRecBtn.onclick=dodajRec;
+            dodajRecDiv.appendChild(dodajRecBtn)
 
-    let recDesno=document.getElementById("recenzijeDesno");
-    if(ulogovan!="0")
-    {
-        let dodajRecBtn=document.createElement("button")
-        dodajRecBtn.classList.add("katalogbtn");
-        dodajRecBtn.innerText="Dodaj recenziju";
-        dodajRecBtn.style="width:fit-content; margin:0;"
-        dodajRecBtn.onclick=dodajRec;
-        dodajRecDiv.appendChild(dodajRecBtn)
-
-        recDesno.appendChild(dodajRecDiv)
+            recDesno.appendChild(dodajRecDiv)
+        }
     }
+    else{
+        let recDesno=document.getElementById("recenzijeDesno");
+
+        let dodajRecBtn=document.createElement("button")
+            dodajRecBtn.classList.add("katalogbtn");
+            dodajRecBtn.innerText="Licitacije";
+            dodajRecBtn.style="width:fit-content; margin:0;"
+            dodajRecBtn.onclick=function(){
+                location.href="licitacije.html";
+
+            }
+            dodajRecDiv.appendChild(dodajRecBtn)
+
+            recDesno.appendChild(dodajRecDiv)
+    }
+    debugger;
+    document.cookie="account=0";
+
 }
 
-function inicijalizujStranicuAccount(){
+
+function inicijalizujStranicuLicitaicje(){
+
     inicijalizujStranicu();
+    levi=document.getElementById("leviDeo");
+    naslov=document.createElement("h1");
+    naslov.innerText="Licitacije";
+
+    levi.appendChild(naslov);
+   
+    for (var i=0;i<4;i++)
+    {
+        colDiv=document.createElement("div");
+        colDiv.classList.add("col-sm-3");
+
+        card=document.createElement("div");
+        card.classList.add("card");
+
+        link=document.createElement("a");
+        link.href="oAutoru.html";
+        link.classList.add("link-secondary");
+
+        cardImg=document.createElement("div");
+        cardImg.classList.add("card-img-top");
+
+        img=document.createElement("img");
+        img.src="slike/placeholder.jpg";
+        img.alt="";
+        img.style="width:100%;";
+
+        cardBody=document.createElement("div");
+        cardBody.classList.add("card-body");
+
+        title=document.createElement("h4");
+        title.classList.add("card-title");
+        title.innerText="Licitacija";
+        cardBody.appendChild(title);
+        if(ulogovan=="3")
+        {
+            forma=document.createElement("form");
+            
+            inp1=document.createElement("input");
+            inp1.type="text";
+            
+            inp2=document.createElement("input");
+            inp2.type="submit"; 
+            inp2.classList.add("katalogbtn");
+            inp2.value="Ponudi";
+
+            forma.appendChild(inp1);
+            forma.appendChild(inp2);
+            cardBody.appendChild(forma);
+
+        }
+        link.appendChild(img)
+        cardImg.appendChild(link);
+        card.appendChild(cardImg);
+        card.appendChild(cardBody);
+        colDiv.appendChild(card);
+        levi.appendChild(colDiv);
+
+    }
+   
+
+}
+function inicijalizujStranicuAccount(){
+    // inicijalizujStranicu();
+    document.cookie="account=1";
+    ulogovan=document.cookie.split("; ").find((row) => row.startsWith("username="))?.split("=")[1];
+
+    if(ulogovan=="1")
+    {
+        inicijalizujStranicuOKorisniku();
+    }
+    else if( ulogovan=="2")
+    {
+        inicijalizujStranicuOAutoru();
+        document.cookie="account=0";
+    }
+    else if(ulogovan=="3")
+    {
+        inicijalizujStranicuOKuci();
+
+    }
+    else if(ulogovan=="4")
+    {
+        inicijalizujStranicuAdmin();
+    }
+
+    
+
 }
