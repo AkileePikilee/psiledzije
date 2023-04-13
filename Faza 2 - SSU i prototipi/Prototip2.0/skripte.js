@@ -562,6 +562,8 @@ function inicijalizujStranicuOKuci()
     opis.appendChild(biografija);
 
     ulogovan=document.cookie.split("; ").find((row) => row.startsWith("username="))?.split("=")[1];
+    account=document.cookie.split("; ").find((row) => row.startsWith("account="))?.split("=")[1];
+
     if(ulogovan!="0")
     { 
         let katalogDugme=document.createElement("button");
@@ -569,6 +571,15 @@ function inicijalizujStranicuOKuci()
         katalogDugme.classList.add("katalogbtn");
         katalogDugme.innerText="Pretplati se";
         katalogDugme.onclick=popUpPretpl;
+
+        if(ulogovan=="3" && account=="1")
+        {
+            katalogDugme.innerText="Izmeni";
+            katalogDugme.onclick=function(){
+                location.href="IzdKucaReg.html";
+            }   
+        }
+
         opis.appendChild(document.createElement("br"));
         opis.appendChild(document.createElement("br"));
         opis.appendChild(katalogDugme);
@@ -584,13 +595,23 @@ function inicijalizujStranicuOKuci()
     dodajRecDiv.classList.add("col-sm-4");
     dodajRecDiv.style="padding-left:10px;";
 
+    if(ulogovan=="3" && account=="1")
+    {
+        let dodajObj=document.createElement("button");
+        dodajObj.classList.add("katalogbtn");
+        dodajObj.innerText="Dodaj Objavu";
+        dodajObj.onclick=editObjavu;
+        recenzijeDiv.appendChild(dodajObj);
+    }
+
     for(let i=0;i<2;i++)
     {
-        if(ulogovan=="4")
+        if(ulogovan=="4" || (ulogovan=="3" && account=="1"))
         {
             let editBtn=document.createElement("button");
             editBtn.classList.add("editBtn");
             editBtn.innerText="...";
+            editBtn.onclick=editObjavu;
             recenzijeDiv.appendChild(editBtn);
         }
 
@@ -611,12 +632,14 @@ function inicijalizujStranicuOKuci()
 
     let recDesno=document.getElementById("recenzijeDesno");
 
-    if(ulogovan!="0")
+    if(ulogovan!="0" && !(ulogovan=="3" && account=="1"))
     {
         let dodajRecBtn=document.createElement("button")
         dodajRecBtn.classList.add("katalogbtn");
         dodajRecBtn.innerText="Dodaj recenziju";
         dodajRecBtn.onclick=dodajRec;
+
+
         dodajRecDiv.appendChild(dodajRecBtn)
 
         recDesno.appendChild(dodajRecDiv)
@@ -856,7 +879,10 @@ function inicijalizujStranicuAccount(){
     }
     else if(ulogovan=="3")
     {
+
         inicijalizujStranicuOKuci();
+        kat=document.getElementById("katalog");
+        kat.style="display:none;"
 
     }
     else if(ulogovan=="4")
@@ -865,5 +891,6 @@ function inicijalizujStranicuAccount(){
     }
 
     
+    document.cookie="account=0";
 
 }
