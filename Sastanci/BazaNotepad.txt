@@ -98,3 +98,4 @@ PONUDA:
 	idIzdKuc  (FK)
 	iznos
 	idLic	  (FK)
+	
