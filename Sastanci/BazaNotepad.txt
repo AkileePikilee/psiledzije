@@ -1,0 +1,100 @@
+?moze null
+
+ULOGA~ROLA
+	-AUTOR
+	-IZDKUCA
+	-KORISNIK
+	
+ULOGA:
+	#korime
+	sifra
+	email
+	slika?
+	brPratilaca
+	prosecnaOcena
+	tip	//char ('K','A','I')
+	ban
+
+KORISNIK:
+	ime prezime
+	datRodj
+	jeAdmin
+
+AUTOR:
+	ime prezime
+	datRodj
+	biografija
+	
+IZDKUCA:
+	naziv
+	istorija
+	adresa
+	
+POVEZANI:
+	#idAutora (FK)
+	#idIzdKuc (FK)
+
+PRATI:
+	idPratilac (FK)
+	idPracen   (FK)
+
+PRODAJNA_MESTA: 
+	idIzdKuca (FK)
+	idProdMest
+	adresa
+
+KNJIGA:
+	#isbn   / string
+	naziv	
+	slika 
+	idIzdKuc  (FK)
+	prosecnaOcena
+	opis?
+
+//Ujedno i katalog
+NAPISAO:  
+	#idKnjige (FK) identif
+	#idAutora (FK) identif
+
+//popunjavamo fiksno knjiga,autor,izdavackaKuca
+NAJPOPULARNIJI_MESEC:
+	idOcenjenog (FK) identif   
+	prosecnaOcena
+
+RECENZIJA:
+	#idRec		-hidden u htmlu
+	ocena 	 (1-5)
+	datumObjave
+	tekst/komentar 
+	idDavac   (FK)
+	idPrimac  (FK)
+	
+KOLEKCIJA:
+	#idUloge	(FK) identif	
+	#idKnjige	(FK) identif 
+	
+//markdown neki nes
+OBJAVA:
+	#idObj
+	sadrzaj
+	datum
+	slika?
+	idVlasnik 	(FK)
+	
+LICITACIJA:
+	#idLic
+	idAutora
+	nazivDela
+	pdf
+	datPocetka
+	datKraja
+	pocCena
+	trenutniIznos  =pocCena na poc.
+	zavrsena
+	idPobednik?
+	
+PONUDA:
+	#idPon
+	idIzdKuc  (FK)
+	iznos
+	idLic	  (FK)
