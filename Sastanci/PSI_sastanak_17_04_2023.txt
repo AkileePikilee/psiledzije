@@ -1,0 +1,26 @@
+ULOGA: BrPratilaca - dodala bih default Nula
+--> stavljeno
+
+AUTOR: Biografija - msm da je 100 karaktera premalo za biografiju
+--> stavljeno 1000 (Biografija, Istorija, Tekst licitacije, Tekst objave)
+
+KNJIGA: ISBN - Varchar(20), ali svi isbn-ovi su duzine 13
+--> ostavili smo na 20 zbog kompatibilnosti sa tabelom NajpopularnijiMesec, resavamo na aplikavitnom
+
+veza Napisao-Knjiga ima >|O, al kao ne moze da postoji knjiga koju nije napisao nijedan autor pa bi tu trebalo not null valjda
+--> ostavili smo >|O radi lakseg testiranja (da ne bismo morali da ubacujemo knjigu odmah u ovu vezu), resavamo na aplikativnom
+
+mozda bi valjalo da dodamo constraint na RECENZIJA: Ocena, kao i svuda prosecnaOcena, da bude i <=5
+--> stavljeno na Recenzija: Ocena i svakoj prosecnoj oceni IzmedjuNulaPet
+
+pošto izdavačka kuća ne može da ima ličnu kolekciju ili ne bih stavio da KorIme dolazi iz Uloge već iz Korisnika i Autora ili pametnije da stavimo i ovde fleg za tip, čisto da se osiguramo
+--> ostavili smo iz Uloge zbog lakse implementacije, resavamo na aplikativnom
+
+mzd za datum rodjenja da se stavi samo date a ne datetime
+--> i dalje mi je date, mozda jebe skripta nesto
+
+KorIme da bude varchar(20) umesto varchar(40)
+--> stavljeno
+
+Sve osim datuma rođenja da bude datetime
+--> svuda je stavljen timestamp (ne postoji datetime), osim za datum rodjenja gde je samo date
