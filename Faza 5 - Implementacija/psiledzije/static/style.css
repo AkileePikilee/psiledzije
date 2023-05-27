@@ -1,0 +1,221 @@
+/* Autor: Ljubica Muravljov  */
+
+#header{
+    padding:0;
+    height: 250px;
+    margin:0;
+    /* background-size:cover;    */
+    background-image: url('slike/header3.jpg');
+}
+
+.full-width-div {
+    position: absolute;
+    width: 100%;
+    
+    padding:0;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('slike/background.jpg');
+    background-attachment: fixed;
+    padding:0;
+}
+.main {
+    height:fit-content;
+
+    background-color: rgba(129, 118, 118, 0.778);
+
+    padding: 20px;
+}
+.cardPic{
+    width: 25%;
+}
+#login{
+    
+    align:center;
+    position:relative;
+   
+    
+    width:30%;
+    height:80%;
+    margin: auto;
+    border-radius: 5% 5% 0% 0%;
+    
+    background-color: #aaaaaad3;
+    padding: 3%;
+
+}
+#signin{
+    
+    align:center;
+    position:relative;
+   
+    
+    width:30%;
+    height:fit-content;
+    margin: auto;
+    border-radius: 5% 5% 0% 0%;
+    
+    background-color: #aaaaaad3;
+    padding: 3%;
+
+}
+.loginbtn{
+
+    background-color: #2e282a;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+ 
+}
+#login input[type=text], [type=password],[type=email], #signin input[type=text],[type=password],[type=email],[type=date],[type=file],textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top:2%;
+    background-color: #ffffff;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 5%;
+}
+
+.resetPassbtn{
+    
+    position: absolute;
+    left:0;
+    bottom:   0;
+    background-color: #Cd5334;
+    color: white;
+    border: none;;
+   height:10%;
+    cursor: pointer;
+    width: 100%;
+ 
+}
+/* .row {  
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin: 0 auto;
+} */
+.signUpCont{
+    position:relative;
+    font-size: 30px;
+    text-align: center;
+    width:90%;
+    height:100%;
+    margin:auto;
+    border-radius: 10%;
+    background-color: #aaaaaaaf;
+    padding: 20px;
+   
+}
+.row > .signUpCont:hover{
+   
+    background-color: #aaaaaaef;
+   
+}
+.signUpCont a{
+    
+
+
+    position: absolute;
+    left:0;
+    bottom:   0;
+    background-color: #df875e;
+    color: white;
+    border: none;
+    
+    cursor: pointer;
+    width: 100%;
+   
+
+    display: block;
+    
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.signUpCont h2{
+    background-color: #aaaaaaef;
+    font-size:larger;
+}
+
+#desno{
+
+    color:white;
+
+    padding: 40px;
+    /* position:relative; */
+    background-color:rgba(129, 118, 118, 0.778);
+    /* padding: 20px;
+    flex-wrap: wrap;
+    flex-grow: 1; */
+}
+.searchbtn{
+    /* position:relative; */
+    background-color: #17Bebb;
+    color: black;
+    
+    vertical-align: middle;
+    
+    font-size:large;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    height: 38px;
+
+    
+ 
+}
+.profilna{
+
+    float:left;
+    width:80%;
+    height:500px;
+}
+.katalogbtn{
+
+    background-color: #83300a;
+    color: white;
+    padding: 14px 20px;
+    margin-bottom: 10%;
+    
+    font-size:large;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    height:fit-content;
+ 
+}
+.editBtn{
+    float:right;
+    background-color: #83300a;
+    color: white;
+    padding: 14px 20px;
+   
+    margin-top:2%;
+    font-size:large;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+
+}
+
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+    height:200px;
+} 
+.popuptext{
+    display: none;
+}
