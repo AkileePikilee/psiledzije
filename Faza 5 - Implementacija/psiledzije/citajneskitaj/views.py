@@ -1,6 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout, login, authenticate
-from django.http import HttpRequest
+from django.contrib.auth.models import Group
+from django.http import HttpRequest, Http404
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import *
@@ -25,6 +26,10 @@ def regKorisnik(request: HttpRequest):
         user: Korisnik = form.save(commit=False)
         user.imeprezime = form.cleaned_data["ime"] + " " + form.cleaned_data["prezime"]
         user.save()
+        group = Group.objects.get(name='Korisnici')
+        user.groups.add(group)
+        login(request, user)
+        return redirect('home')
     return render(request, 'registration/regKorisnik.html', {
         'form': form
     })
@@ -39,6 +44,10 @@ def regAutor(request: HttpRequest):
         user.tip = 'A'
         user.imeprezime = form.cleaned_data["ime"] + " " + form.cleaned_data["prezime"]
         user.save()
+        group = Group.objects.get(name='Autori')
+        user.groups.add(group)
+        login(request, user)
+        return redirect('home')
     return render(request, 'registration/regAutor.html', {
         'form': form
     })
@@ -52,11 +61,16 @@ def regKuca(request: HttpRequest):
         user: IzdavackaKuca = form.save(commit=False)
         user.tip = 'I'
         user.save()
+        group = Group.objects.get(name='Kuce')
+        user.groups.add(group)
+
         lokacije = form.cleaned_data["lokacije"].split("#")
         for lok in lokacije:
             if lok:
                 instance = ProdajnaMesta(idizdkuca=user, adresa=lok)
                 instance.save()
+        login(request, user)
+        return redirect('home')
     return render(request, 'registration/regKuca.html', {
         'form': form
     })
@@ -77,7 +91,26 @@ def login_req(request: HttpRequest):
         "form": form
     })
 
-
 def logout_req(request: HttpRequest):
     logout(request)
     return redirect('home')
+
+def knjiga(request: HttpRequest, knjiga_id: str):
+    try:
+        knjiga = Knjiga.objects.get(pk=knjiga_id)
+        napisanija = Napisao.objects.filter(isbn=knjiga.isbn)
+        autori = ''
+        for napisanije in napisanija:
+            autori += napisanije.idautor.imeprezime + ', '
+        autori = autori[0:-2]
+
+        recenzije = Recenzija.objects.filter(idprimalacknjiga=knjiga)
+
+    except:
+        raise Http404("Ne postoji knjiga sa tim ID :(")
+    context = {
+        'knjiga': knjiga,
+        'autori': autori,
+        'recenzije': recenzije
+    }
+    return render(request, 'entities/knjiga.html', context)

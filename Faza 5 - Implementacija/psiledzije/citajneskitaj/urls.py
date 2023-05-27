@@ -9,5 +9,6 @@ urlpatterns = [
     path('reg/autor', regAutor, name="regAutor"),
     path('reg/kuca', regKuca, name="regKuca"),
     path('login/', login_req, name="login"),
-    path('logout/', logout_req, name="logout")
+    path('logout/', logout_req, name="logout"),
+    path('knjiga/<str:knjiga_id>', knjiga, name="knjiga"),
 ]
