@@ -116,7 +116,7 @@ body{
     padding: 20px;
    
 }
-.row > .signUpCont:hover{
+.col-sm-4 > .signUpCont:hover{
    
     background-color: #aaaaaaef;
    
