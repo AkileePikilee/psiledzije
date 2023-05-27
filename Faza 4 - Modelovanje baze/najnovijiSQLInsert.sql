@@ -1,18 +1,18 @@
 INSERT INTO Uloga VALUES
-('ljubica', '123', 'ljubica@etf.rs', null, 1, 0, 'K', 0),
-('nevajda', '123', 'nevajda@etf.rs', null, 0, 0, 'K', 1),
-('mican', '123', 'mican@etf.rs', null, 1, 0, 'K', 0),
-('djape', '123', 'djape@etf.rs', null, 1, 2.0, 'A', 0),
-('tolstoj', '123', 'tolstoj@etf.rs', null, 1, 4.0, 'A', 0),
-('kafka', '123', 'kafka@etf.rs', null, 0, 0, 'A', 0),
-('dereta', '123', 'dereta@etf.rs', null, 1, 0, 'I', 0),
-('jasen', '123', 'jasen@etf.rs', null, 1, 0, 'I', 0),
-('klett', '123', 'klett@etf.rs', null, 0, 0, 'I', 0);
+(1, 1, 1, 'ljubica', 'pbkdf2_sha256$600000$dzqCyi5ntJCgq1jRa4yn0v$HwR28mG1geKLDhgaBhMBynZZepUXWxaA6XTKHFDtxYE=', 'ljubica@etf.rs', null, 1, 0, 'K', 0),
+(0, 0, 0, 'nevajda', 'pbkdf2_sha256$600000$dzqCyi5ntJCgq1jRa4yn0v$HwR28mG1geKLDhgaBhMBynZZepUXWxaA6XTKHFDtxYE=', 'nevajda@etf.rs', null, 0, 0, 'K', 1),
+(0, 0, 1, 'mican', 'pbkdf2_sha256$600000$dzqCyi5ntJCgq1jRa4yn0v$HwR28mG1geKLDhgaBhMBynZZepUXWxaA6XTKHFDtxYE=', 'mican@etf.rs', null, 1, 0, 'K', 0),
+(0, 0, 1, 'djape', 'pbkdf2_sha256$600000$dzqCyi5ntJCgq1jRa4yn0v$HwR28mG1geKLDhgaBhMBynZZepUXWxaA6XTKHFDtxYE=', 'djape@etf.rs', null, 1, 2.0, 'A', 0),
+(0, 0, 1, 'tolstoj', 'pbkdf2_sha256$600000$dzqCyi5ntJCgq1jRa4yn0v$HwR28mG1geKLDhgaBhMBynZZepUXWxaA6XTKHFDtxYE=', 'tolstoj@etf.rs', null, 1, 4.0, 'A', 0),
+(0, 0, 1, 'kafka', 'pbkdf2_sha256$600000$dzqCyi5ntJCgq1jRa4yn0v$HwR28mG1geKLDhgaBhMBynZZepUXWxaA6XTKHFDtxYE=', 'kafka@etf.rs', null, 0, 0, 'A', 0),
+(0, 0, 1, 'dereta', 'pbkdf2_sha256$600000$dzqCyi5ntJCgq1jRa4yn0v$HwR28mG1geKLDhgaBhMBynZZepUXWxaA6XTKHFDtxYE=', 'dereta@etf.rs', null, 1, 0, 'I', 0),
+(0, 0, 1, 'jasen', 'pbkdf2_sha256$600000$dzqCyi5ntJCgq1jRa4yn0v$HwR28mG1geKLDhgaBhMBynZZepUXWxaA6XTKHFDtxYE=', 'jasen@etf.rs', null, 1, 0, 'I', 0),
+(0, 0, 1, 'klett', 'pbkdf2_sha256$600000$dzqCyi5ntJCgq1jRa4yn0v$HwR28mG1geKLDhgaBhMBynZZepUXWxaA6XTKHFDtxYE=', 'klett@etf.rs', null, 0, 0, 'I', 0);
 
 INSERT INTO Korisnik VALUES
-('ljubica', 'Ljubica Muravljov', '2001-12-21', 1),
-('nevajda', 'Luka Nevajda', '2000-11-10', 0),
-('mican', 'Aleksa Micanovic', '2001-09-24', 0);
+('ljubica', 'Ljubica Muravljov', '2001-12-21'),
+('nevajda', 'Luka Nevajda', '2000-11-10'),
+('mican', 'Aleksa Micanovic', '2001-09-24');
 
 INSERT INTO Autor VALUES
 ('djape', 'Predrag Pesic', '2001-04-14', 'Rodjen u Beogradu. Nije umro.'),
