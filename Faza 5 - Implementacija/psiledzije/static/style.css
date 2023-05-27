@@ -39,7 +39,7 @@ body{
     position:relative;
    
     
-    width:30%;
+    width:50%;
     height:80%;
     margin: auto;
     border-radius: 5% 5% 0% 0%;
@@ -49,16 +49,16 @@ body{
 
 }
 #signin{
-    
+
     align:center;
     position:relative;
-   
-    
-    width:30%;
+
+
+    width:40%;
     height:fit-content;
     margin: auto;
     border-radius: 5% 5% 0% 0%;
-    
+
     background-color: #aaaaaad3;
     padding: 3%;
 
