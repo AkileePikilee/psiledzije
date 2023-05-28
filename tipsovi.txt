@@ -1,0 +1,53 @@
+-Napraviti bazu iz Djanga i exportovati u Workbench
+
+-Pogledati AJAX PSI predavanje (ili vezbe nz) + tutorijal sa discorda za AJAX u DJangu
+
+-Odluciti o izgledu endpointova
+	/registracija
+				 /korisnik
+				 /autor
+				 /kuca
+	/login (logout)
+	/mojprofil
+			  /promena-sifre
+			  /promena-info
+			  /nova-objava
+	/pretraga?sort=.i.&asc=true
+	/
+	/knjiga/<isbn>
+	/profil/<username>	 
+	
+	/licitacije
+			   /<id>
+	
+	/nova-knjiga
+	/admin-panel
+				/reset-lozinke
+				/banuj-nalog
+	
+PRIORITETI:
+-------
+Registracija / Login
+Knjiga (layout)
+Profil (layout, prikaz objava, recenzija, informacija, brPratilaca, povezane kuce, autori, knige, kolekcije)
+-------
+Knjiga (dodavanje u kolekciju)
+Profil (zaprati/otprati, svoje recenzije)
+Moj profil(menjam svoje objave, informacije svog profila, sifru itd)
+
+Profil (nova objava)
+Pretraga (unos kljuca i prikaz rezultata)
+
+Homepage (prikaz najbolje ocenjenih, prikaz feed-a za ulogovane korisnike)
+
+
+Licitacije (prikaz licitacija, pravljenje nove licitacije, licitiranje)
+---RAZMISLITI KAKO PROLAZI VREME, KAKO AZURIRAMO KRAJ---
+
+AdminPanel (reset lozinke, banovanje naloga, brisanje tudjih recenzija ili objava sa njihoih profila)
+
+
+
+
+
+-razmaknuti search boxove - mnogo su blizu
