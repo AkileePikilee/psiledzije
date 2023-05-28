@@ -10,12 +10,11 @@
             <div class=" col-sm-8 main" id="levi">
                 <div class="row col-sm-8" id="infoKnjiga" style="margin-bottom:10px;">
                     <div class="col-sm-4">
-                        <img class="profilnaU" src="{% if uloga.slika %}{{ uloga.slika.url }}{% endif %}">
+                        <img class="profilnaU" src="{% if uloga.slika %}{{ uloga.slika.url }}{% endif %}" alt="No image :(">
                     </div>
                     <div class="col-sm-8">
                         <h1 style="font-weight: bold">{{ profil.imeprezime }}</h1>
                         <h3 style="margin-bottom: 5%;"><b>Broj pratilaca:</b>{{ profil.brpratilaca }}</h3>
-                        <h5><b>Biografija:</b> {{ profil.biografija }}</h5>
                         {% if user.is_authenticated %}
                             <button type="button" class="katalogbtn">Pretplati se</button>
                         {% endif %}
@@ -23,40 +22,31 @@
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="col-sm-10 recenzije">
-                        <h1 style="font-weight: bold;"><u>Recenzije</u></h1>
-                        {% for rec in recenzije %}
-                            <div class="recenzija">
-                                <h2>⭐{{ rec.ocena }} - <i>@{{ rec.iddavalac.username }}</i></h2>
-                                <div style="font-style: italic">{{ rec.tekst }}</div>
-                                {% if rec.iddavalac == user or perms.citajneskitaj.edit_recenzija %}
-                                    <button class="editBtn">...</button>
-                                {% endif %}
-                            </div>
-                        {% endfor %}
+                    <div class="col-sm-10 objave">
+
 
                     </div>
                     <div class="col-sm-2">
-                        <button class="katalogbtn">Dodaj recenziju</button>
+                        {% if uloga == user %}
+                        <button class="katalogbtn">Dodaj objavu</button>
+                        {% endif %}
                     </div>
 
                 </div>
             </div>
 
 
-            <div class="col-sm-4 main" style="margin:0; padding:0;">
-                <div class="col-sm-2" id="recenzijeDesno" style="margin:0; padding:0;">
-
-                </div>
-                <div class="col-sm-10 main" style="margin:0; padding:0;">
-                    <h2>Recenzija</h2>
-                    <img class="fakeimg">
-                    <h2>Recenzija</h2>
-                    <img class="fakeimg">
-                    <button class="editBtn" onclick="meniRec()">...</button>
-                    <h2>Recenzija</h2>
-                    <img class="fakeimg">
-                </div>
+            <div class="col-sm-4 recenzije" style="margin:0; padding:0;">
+                <h1 style="font-weight: bold;"><u>Recenzije</u></h1>
+                {% for rec in recenzije %}
+                    <div class="recenzija">
+                        {% if rec.iddavalac == user or perms.citajneskitaj.edit_recenzija %}
+                            <button class="editBtn">...</button>
+                        {% endif %}
+                        <h2>⭐{{ rec.ocena }} - <i>@{{ rec.iddavalac.username }}</i></h2>
+                        <div style="font-style: italic">{{ rec.tekst }}</div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
 

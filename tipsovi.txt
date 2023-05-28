@@ -51,3 +51,4 @@ AdminPanel (reset lozinke, banovanje naloga, brisanje tudjih recenzija ili objav
 
 
 -razmaknuti search boxove - mnogo su blizu
+-malo ulepsati boje ipak
