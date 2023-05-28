@@ -114,3 +114,28 @@ def knjiga(request: HttpRequest, knjiga_id: str):
         'recenzije': recenzije
     }
     return render(request, 'entities/knjiga.html', context)
+
+def profil(request: HttpRequest, profil_id: str):
+    try:
+        uloga = Uloga.objects.get(pk=profil_id)
+        recenzije = Recenzija.objects.filter(idprimalaculoga=uloga)
+
+        context = {
+            'uloga': uloga,
+            'recenzije': recenzije
+        }
+
+        if uloga.tip == 'A':
+            context['profil'] = Autor.objects.get(pk=profil_id)
+            return render(request, 'entities/autor.html', context)
+        elif uloga.tip == 'K':
+            context['profil'] = Korisnik.objects.get(pk=profil_id)
+            return render(request, 'entities/korisnik.html', context)
+        else:
+            context['profil'] = IzdavackaKuca.objects.get(pk=profil_id)
+            return render(request, 'entities/izdavackakuca.html', context)
+    except Autor.DoesNotExist:
+        raise Http404("Ne postoji profil sa tim ID :(")
+
+
+

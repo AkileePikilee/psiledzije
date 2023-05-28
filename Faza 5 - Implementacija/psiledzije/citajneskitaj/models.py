@@ -163,7 +163,7 @@ class ProdajnaMesta(models.Model):
 
 class Recenzija(models.Model):
     idrec = models.IntegerField(db_column='IDRec', primary_key=True)
-    ocena = models.IntegerField(db_column='Ocena')
+    ocena = models.DecimalField(db_column='Ocena', max_digits=5 ,decimal_places=1)
     datumobjave = models.DateTimeField(db_column='DatumObjave')
     tekst = models.CharField(db_column='Tekst', max_length=1000)
     iddavalac = models.ForeignKey(db_column='IDDavalac', max_length=20, to='Uloga', on_delete=models.DO_NOTHING, related_name='related_to_davalac_uloga')
